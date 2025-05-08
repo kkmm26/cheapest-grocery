@@ -16,5 +16,5 @@ export async function GET(request: Request) {
   await page.goto("https://example.com");
   const pageTitle = await page.title();
   await browser.close();
-  return Response.json({ s: "haha" });
+  return Response.json({ pageTitle });
 }
