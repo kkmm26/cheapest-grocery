@@ -8,7 +8,7 @@ export async function GET(request: Request) {
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
     executablePath:
-      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath()),
+      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath("s3://cheapest-grocery-chromium/chromium-v133.0.0-pack.tar")),
     headless: chromium.headless,
   });
 
